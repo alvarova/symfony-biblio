@@ -1,0 +1,97 @@
+
+
+	//Instalacion del Flex
+composer require symfony/flex 
+	// Para ruteos
+composer require annotations
+	// Manejo de Assets
+composer require symfony/asset
+	// Agrega generador de CRUDS y manejador de consola
+composer require maker-bundle --dev
+	// Plantillas templates
+composer require twig
+	// ORM
+composer require doctrine
+	// Manejo de errores y debug
+composer require profiler --dev
+
+	// Compositor de CSS+JS
+
+composer require webpack
+	
+	// Remover webpack
+composer remove symfony/webpack-encore-pack
+
+-> instalar yarn
+-> yarn encore dev-server  (para server de desarrollo)
+
+
+	// Serializador para API y Proxy 
+composer require symfony/proxy-manager-bridge symfony/serializer
+	// Instala API platform
+composer require api
+
+
+
+ 1372  composer require annotations asset orm twig logger form validator
+ 1373  composer require --dev dotenv maker-bundle orm-fixtures profiler
+ 1375  composer install
+ 1376  yarn encore dev --watch
+ 1381  sudo apt remove cmdtest
+ 1382  sudo apt remove yarn
+ 1383  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+ 1384  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+ 1385  sudo apt-get update
+ 1386  sudo apt-get install yarn -y
+ 1387  yarn
+ 1388  composer require symfony/webpack-encore-bundle
+ 1389  yarn install
+ 1391  yarn add @symfony/webpack-encore --dev
+ 1392  yarn watch
+
+Creacion Controladores
+
+//registra SSL sitio seguro
+symfony server:ca:install
+
+//Inicia o detiene servidor
+symfony serve -d
+
+symfony server:stop 
+
+
+//Creacion de controladores
+symfony console make:controller -> los controladores deben respetar camelCase ConferenceController
+
+
+
+
+Recetas/Recipes instaladas:
+ * api-platform/core 
+ * doctrine/annotations 
+ * doctrine/doctrine-bundle 
+ * doctrine/doctrine-fixtures-bundle 
+ * doctrine/doctrine-migrations-bundle 
+ * nelmio/cors-bundle 
+ * sensio/framework-extra-bundle 
+ * symfony/console 
+ * symfony/flex 
+ * symfony/framework-bundle 
+ * symfony/maker-bundle 
+ * symfony/monolog-bundle 
+ * symfony/routing 
+ * symfony/security-bundle 
+ * symfony/twig-bundle 
+ * symfony/validator 
+ * symfony/web-profiler-bundle 
+ * symfony/webpack-encore-bundle 
+ * twig/extra-bundle 
+
+
+ --Docker--
+ docker pull postgres:11-alpine
+ docker-compose up -d
+ docker-compose start / stop
+
+ docker-compose exec database psql main main  //Abre instancia DB en docker
+ 
